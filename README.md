@@ -12,8 +12,8 @@ To address the challenge of traditional vehicle infotainment interfaces, we prop
 ## Timeline
 The research project was done under the supervision of Prof. Dr. Soodeh and as a part of my 12-week MITACS Globalink Research Internship at Western University, London, Ontario.
 
-| Task                     | Completed |
-|--------------------------|-----------|
+| Task                             | Completed |
+|----------------------------------|-----------|
 | Week 3: Complete data collection and pre-processing  | ✅ |  
 | Week 6: Achieve baseline performance on hand gesture
 recognition      | ✅ | 
