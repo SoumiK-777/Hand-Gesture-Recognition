@@ -10,7 +10,7 @@ To address these issues, we propose the development of a personalized hand gestu
 To address the challenge of traditional vehicle infotainment interfaces, we propose a personalized hand gesture recognition system based on few-shot learning. Few-shot learning enables a model to learn and make accurate predictions from a limited number of training examples. In this context, drivers will provide only a few samples of their personalized hand gestures, and our model will be able to recognize and predict these gestures with high accuracy.
 
 ## Timeline
-The research project was done under the supervision of Prof. Dr. Soodeh and as a part of my 12-week MITACS Globalink Research Internship at Western University, London, Ontario.
+The research project was done under the supervision of Prof. Dr. Soodeh Nikan and as a part of my 12-week MITACS Globalink Research Internship at Western University, London, Ontario.
 
 | Task                                            | Completed |
 |-------------------------------------------------|-----------|
