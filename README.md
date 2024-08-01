@@ -10,10 +10,10 @@ To address these issues, we propose the development of a personalized hand gestu
 To address the challenge of traditional vehicle infotainment interfaces, we propose a personalized hand gesture recognition system based on few-shot learning. Few-shot learning enables a model to learn and make accurate predictions from a limited number of training examples. In this context, drivers will provide only a few samples of their personalized hand gestures, and our model will be able to recognize and predict these gestures with high accuracy.
 
 ## Timeline
-The research project was done under the supervision of Prof. Dr. Soodeh Nikan and as a part of my 12-week MITACS Globalink Research Internship at Western University, London, Ontario.
+The research project was done under the supervision of Prof. Dr. Soodeh Nikan and as a part of my 12-week MITACS Globalink Research Internship at Western University, London, Ontario, Canada.
 
-| Milestones                                            | Completed |
-|-------------------------------------------------------|-----------|
+| Task                          | Completed |
+|-------------------------------|-----------|
 | Week 3: Complete data collection and pre-processing  | ✅ |  
 | Week 6: Achieve baseline performance on hand gesture
 recognition      | ✅ | 
@@ -26,6 +26,26 @@ infotainment control system | ✅ |
 
 HaGRID lightweight version size is 26.4GB and dataset contains 554,800 FullHD RGB images divided into 18 classes of gestures.
 
+Dataset folder structure:
+```
+data 
+│
+└─── gesture1
+│   │   img000.jpg
+│   │   img001.jpg
+|   |   ....
+│   
+└─── gesture2
+│   │   img000.jpg
+│   │   img001.jpg
+|   |   ....
+|
+└─── gesture3
+│   │   img000.jpg
+│   │   img001.jpg
+|   |   ....
+│   │
+```
  Gesture                           | No. of samples    | Gesture                                   | No. of samples    |
 |-----------------------------------|---------|-------------------------------------------|---------|
 | [`call`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/call.zip)    | 37.2 GB | [`peace`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/peace.zip)           | 41.4 GB |
@@ -38,6 +58,8 @@ HaGRID lightweight version size is 26.4GB and dataset contains 554,800 FullHD RG
 | [`one`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/one.zip)     | 42.7 GB | [`two_up`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/two_up.zip)          | 41.8 GB |
 | [`palm`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/palm.zip)    | 43.0 GB | [`two_up_inverted`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/hagrid/hagrid_dataset_new_554800/hagrid_dataset/two_up_inverted.zip) | 40.9 GB |
 
+#### Data preprocessing
+
 The dataset was divided into three parts:
 - Training
 - Validation
@@ -49,9 +71,27 @@ The dataset was divided into three parts:
 
 ## Methodologies
 
-- Siamese Network
-- Prototypical Network
-- Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions
+- ### Siamese Network
+    These type of neural network architecture designed for tasks that involve comparing two inputs to determine their similarity. They are frequently used in image classification, especially in cases involving few-shot learning or tasks where the goal is to determine if two images are of the same class.
+    - #### Architecture of Feature Extraction Layer
+        The network consists of two identical subnetworks which share the same architecture and weights. Each subnetwork extracts features from its input image, using convolutional layers. These features are then represented as high-dimensional vectors.
+    - #### Loss Function
+        We used the contrastive loss for training our siamese network.  It encourages the network to output a small distance for similar pairs and a larger distance for dissimilar pairs. The loss is computed as:
+
+            $$
+            \text{Loss} = \frac{1}{2} \left[ y \cdot D^2 + (1 - y) \cdot \max(0, \text{margin} - D)^2 \right]
+            $$
+
+            Where:
+            - \( y \) is the label indicating whether the two input images are from the same class (1 for same, 0 for different).
+            - \( D \) is the Euclidean distance between the feature vectors of the two images.
+            - \( \text{margin} \) is a parameter that defines how far apart dissimilar pairs should be.
+
+    - #### Training and Evaluation
+
+
+- ### Prototypical Network
+- ### Few-shot Embedding Adaptation with Transformer (FEAT)
 
 ## Installation
 
