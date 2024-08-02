@@ -24,7 +24,7 @@ infotainment control system | ✅ |
 ## Dataset Overview
 #### HaGRID - HAnd Gesture Recognition Image Dataset
 
-HaGRID lightweight version size is 26.4GB and dataset contains 554,800 FullHD RGB images divided into 18 classes of gestures.
+HaGRID lightweight version size is 26.4GB and dataset contains 88,991 FullHD RGB images divided into 18 classes of gestures.
 
 Dataset folder structure:
 ```
