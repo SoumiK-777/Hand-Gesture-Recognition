@@ -78,9 +78,9 @@ The dataset was divided into three parts:
     - #### Loss Function
         We used the contrastive loss for training our siamese network.  It encourages the network to output a small distance for similar pairs and a larger distance for dissimilar pairs. The loss is computed as:
 
-            $$
+            $$$
             \text{Loss} = \frac{1}{2} \left[ y \cdot D^2 + (1 - y) \cdot \max(0, \text{margin} - D)^2 \right]
-            $$
+            $$$
 
             Where:
             - \( y \) is the label indicating whether the two input images are from the same class (1 for same, 0 for different).
