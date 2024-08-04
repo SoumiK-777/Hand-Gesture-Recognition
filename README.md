@@ -24,7 +24,9 @@ infotainment control system | ✅ |
 ## Dataset Overview
 #### HaGRID - HAnd Gesture Recognition Image Dataset
 
-HaGRID lightweight version size is 26.4GB and dataset contains 88,991 FullHD RGB images divided into 18 classes of gestures.
+HaGRID lightweight version size is 26.4GB and dataset contains 88,991 FullHD RGB images divided into 18 classes of gestures. The dataset is used to develop Hand Gesture Recognition Systems which can be used in video conferencing services (Zoom, Skype, Discord, Jazz etc.), home automation systems, the automotive sector, etc. There are at least 37,583 distinct individuals and scenes in the collection. The subjects range in age from eighteen to sixty-five. The majority of the data collection took place inside, where artificial and natural light were present in varying degrees. Additionally, the dataset contains photos that were taken under challenging circumstances, such backing up against a window. Additionally, the subjects had to make motions between 0.5 and 4 meters away from the camera.
+
+(Dataset image)
 
 Dataset folder structure:
 ```
