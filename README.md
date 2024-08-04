@@ -93,7 +93,7 @@ The dataset was divided into three parts:
 
 
 - ### Prototypical Network
-    Given only a few examples of each new class, prototype networks generalize to new classes not observed in the training set. Prototypical networks pick up a metric space where distances to prototype representations of each class can be calculated for the purpose of classification. They obtain outstanding results and reflect a simpler inductive bias that is useful in this limited-data domain, compared to recent techniques for few-shot learning.
+    Given only a few examples of each new class, prototype networks generalize to new classes not observed in the training set. Prototypical networks pick up a metric space where distances to prototype representations of each class can be calculated for the purpose of classification. They obtain outstanding results and reflect a simpler inductive bias that is useful in this limited-data domain, compared to other techniques for few-shot learning.
 - ### Few-shot Embedding Adaptation with Transformer (FEAT)
 
 ## Installation
