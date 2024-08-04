@@ -63,9 +63,9 @@ data
 #### Data preprocessing
 
 The dataset was divided into three parts:
-- Training
-- Validation
-- Testing
+- Training (80%)
+- Validation (10%)
+- Testing (10%)
 
 [Access the dataset](https://github.com/hukenovs/hagrid)\
 [Access the official arxiv paper](https://arxiv.org/abs/2206.08219)
