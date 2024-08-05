@@ -80,6 +80,9 @@ The dataset was divided into three parts:
     - #### Loss Function
         We used the contrastive loss for training our siamese network.  It encourages the network to output a small distance for similar pairs and a larger distance for dissimilar pairs.
 
+      | Training Loss | Validation Accuracy | Test Accuracy |
+    |---------------|---------------------|---------------|
+    | 0.00136          | 100%                 | 99.87%    |
 
 - ### Prototypical Network
     Given only a few examples of each new class, prototype networks generalize to new classes not observed in the training set. Prototypical networks pick up a metric space where distances to prototype representations of each class can be calculated for the purpose of classification. They obtain outstanding results and reflect a simpler inductive bias that is useful in this limited-data domain, compared to other techniques for few-shot learning.
@@ -100,7 +103,7 @@ The dataset was divided into three parts:
 
     | Training Loss | Validation Accuracy | Test Accuracy |
     |---------------|---------------------|---------------|
-    | 0.00136          | 100%                 | 99.87%           |
+    | 0.00136          | 100%                 | 99.87%    |
 
 
 <!-- ## Installation
