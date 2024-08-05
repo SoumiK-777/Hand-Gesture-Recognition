@@ -26,7 +26,7 @@ infotainment control system | ✅ |
 
 HaGRID lightweight version size is 26.4GB and dataset contains 88,991 FullHD RGB images divided into 18 classes of gestures. The dataset is used to develop Hand Gesture Recognition Systems which can be used in video conferencing services (Zoom, Skype, Discord, Jazz etc.), home automation systems, the automotive sector, etc. There are at least 37,583 distinct individuals and scenes in the collection. The subjects range in age from eighteen to sixty-five. The majority of the data collection took place inside, where artificial and natural light were present in varying degrees. Additionally, the dataset contains photos that were taken under challenging circumstances, such backing up against a window. Additionally, the subjects had to make motions between 0.5 and 4 meters away from the camera.
 
-(Dataset image)
+![Dataset](./imgs/Screenshot%20from%202024-08-04%2023-33-50.png)
 
 Dataset folder structure:
 ```
@@ -78,18 +78,7 @@ The dataset was divided into three parts:
     - #### Architecture of Feature Extraction Layer
         The network consists of two identical subnetworks which share the same architecture and weights. Each subnetwork extracts features from its input image, using convolutional layers. These features are then represented as high-dimensional vectors.
     - #### Loss Function
-        We used the contrastive loss for training our siamese network.  It encourages the network to output a small distance for similar pairs and a larger distance for dissimilar pairs. The loss is computed as:
-
-            $$$
-            \text{Loss} = \frac{1}{2} \left[ y \cdot D^2 + (1 - y) \cdot \max(0, \text{margin} - D)^2 \right]
-            $$$
-
-            Where:
-            - \( y \) is the label indicating whether the two input images are from the same class (1 for same, 0 for different).
-            - \( D \) is the Euclidean distance between the feature vectors of the two images.
-            - \( \text{margin} \) is a parameter that defines how far apart dissimilar pairs should be.
-
-    - #### Training and Evaluation
+        We used the contrastive loss for training our siamese network.  It encourages the network to output a small distance for similar pairs and a larger distance for dissimilar pairs.
 
 
 - ### Prototypical Network
@@ -97,14 +86,24 @@ The dataset was divided into three parts:
 
     A custom resnet12 backbone extracts the input features with SGD optimizer in the provided approach.
 
-  (Proto results Image)
+  ![Proto Loss and Curves](./imgs/Screenshot%20from%202024-08-03%2021-34-09.png)
+
+    | Training Loss | Validation Accuracy | Test Accuracy |
+    |---------------|---------------------|---------------|
+    | 0.00358          | 100%                 | 99.34%           |
 - ### Few-shot Embedding Adaptation with Transformer (FEAT)
     A novel model-based approach is proposed to adapt instance embeddings to the target classification task using a set-to-set function, yielding task-specific and discriminative embeddings. Various instantiations of such set-to-set functions were empirically investigated, with the Transformer being the most effective due to its alignment with key desired properties. This method is denoted as a Few-shot Embedding Adaptation with Transformer (FEAT).
 
     A custom resnet12 backbone with pre-trained weights from the MiniImageNet Dataset extracts the input features with SGD optimizer in the provided approach.
 
-  (Feat results image)
-## Installation
+  ![FEAT Loss and Curves](./imgs/Screenshot%20from%202024-08-03%2021-56-41.png)
+
+    | Training Loss | Validation Accuracy | Test Accuracy |
+    |---------------|---------------------|---------------|
+    | 0.00136          | 100%                 | 99.87%           |
+
+
+<!-- ## Installation
 
 ## Usage
 
@@ -112,5 +111,5 @@ The dataset was divided into three parts:
 
 ## Evaluation
 
-## References
+## References -->
 
