@@ -94,8 +94,16 @@ The dataset was divided into three parts:
 
 - ### Prototypical Network
     Given only a few examples of each new class, prototype networks generalize to new classes not observed in the training set. Prototypical networks pick up a metric space where distances to prototype representations of each class can be calculated for the purpose of classification. They obtain outstanding results and reflect a simpler inductive bias that is useful in this limited-data domain, compared to other techniques for few-shot learning.
-- ### Few-shot Embedding Adaptation with Transformer (FEAT)
 
+    A custom resnet12 backbone extracts the input features with SGD optimizer in the provided approach.
+
+  (Proto results Image)
+- ### Few-shot Embedding Adaptation with Transformer (FEAT)
+    A novel model-based approach is proposed to adapt instance embeddings to the target classification task using a set-to-set function, yielding task-specific and discriminative embeddings. Various instantiations of such set-to-set functions were empirically investigated, with the Transformer being the most effective due to its alignment with key desired properties. This method is denoted as a Few-shot Embedding Adaptation with Transformer (FEAT).
+
+    A custom resnet12 backbone with pre-trained weights from the MiniImageNet Dataset extracts the input features with SGD optimizer in the provided approach.
+
+  (Feat results image)
 ## Installation
 
 ## Usage
